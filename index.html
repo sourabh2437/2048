@@ -1,8 +1,36 @@
 <html>
-    <head>
-        <title>2048
-        </title>
+
+<head>
+    <title>2048
+    </title>
+    <link rel="stylesheet" type="text/css" href="./assets/css/2048_game.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/sweetalert.css">
 </head>
-    <body>
-    </body>
+
+<body>
+    <h1 class="title"><center>2048</center></h1>
+    <div id="gameScreen">
+        <div id="part1">
+            <div id="Rules">
+            </div>
+            <div id="scoreboard">
+            </div>
+        </div>
+        <div id="part2">
+            <div id="score">
+
+                <p style="display:inline" id="scoreCard">Score : 0</p>
+                <button id="restartBtn" class="button" onclick="onPressRestart()" type="button">Restart</button>
+                <button id="undoBtn" class="button"  onclick="onPressUndo()" type="button">Undo</button>
+
+            </div>
+            <div id="gameGrid">
+            </div>
+        </div>
+    </div>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="./assets/js/2048_game.js" type="text/javascript"></script>
+    <script src="./assets/js/sweetalert.min.js" type="text/javascript"></script>
+</body>
+
 </html>

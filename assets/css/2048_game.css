@@ -1,0 +1,132 @@
+.table1 {
+    width: 480px;
+    position: absolute;
+    table-layout: fixed;
+}
+
+.row {
+    /*    border: 1px solid #666666;*/
+    width: 100px;
+    height: 100px;
+    text-align: center;
+}
+
+tr.row td {
+    border: 10px solid #bbada0;
+}
+
+td {
+    font-size: 50px;
+    font-family: "Lucida Sans Typewriter";
+    font-weight: bold;
+    background: #eee4da;
+}
+
+#undoBtn {
+    float: right;
+}
+
+#restartBtn {
+    float: right;
+    margin-left: 5px;
+}
+
+#Rules {
+    float: left;
+}
+
+#score {
+    width: 410px;
+    position: relative;
+    padding: 10px;
+}
+
+#scoreBoardTable {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.emptyCell {
+    background: #eee4da;
+}
+
+.cell2 {
+    background: #eee4da;
+    color: #776e65;
+    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0);
+}
+
+.cell4 {
+    background: #ede0c8;
+    color: #776e65;
+    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0);
+}
+
+.cell8 {
+    color: #f9f6f2;
+    background: #f2b179;
+}
+
+.cell16 {
+    color: #f9f6f2;
+    background: #f59563;
+}
+
+.cell32 {
+    color: #f9f6f2;
+    background: #f67c5f;
+}
+
+.cell64 {
+    color: #f9f6f2;
+    background: #f65e3b;
+}
+
+.cell128 {
+    color: #f9f6f2;
+    background: #edcf72;
+    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.2381), inset 0 0 0 1px rgba(255, 255, 255, 0.14286);
+    font-size: 45px;
+}
+
+.cell256 {}
+
+.cell512 {}
+
+.cell1024 {}
+
+.cell2048 {}
+
+body {
+    background: #faf8ef;
+    align-content: center;
+}
+
+.title {
+    font-size: 80px;
+    font-weight: bold;
+    color: #776e65;
+    font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+}
+
+.button {
+    background: #8f7a66;
+    border-radius: 3px;
+    padding: 0 20px;
+    text-decoration: none;
+    color: #f9f6f2;
+    height: 40px;
+    line-height: 42px;
+    cursor: pointer;
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+}
+
+#scoreCard {
+    font-size: 30px;
+    font-weight: bold;
+    color: #776e65;
+    font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+}
