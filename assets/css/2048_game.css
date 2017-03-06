@@ -1,6 +1,10 @@
+body{
+    align-content: center;
+    align-items: center;
+}
 .table1 {
     width: 480px;
-    position: absolute;
+    position: relative;
     table-layout: fixed;
 }
 
@@ -38,7 +42,7 @@ td {
 #score {
     width: 410px;
     position: relative;
-    padding: 10px;
+    padding: 30px;
 }
 
 #scoreBoardTable {
@@ -51,6 +55,8 @@ td {
 }
 
 .cell2 {
+    animation: pop 200ms ease 100ms;
+    animation-fill-mode: backwards;
     background: #eee4da;
     color: #776e65;
     box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0);
@@ -89,13 +95,33 @@ td {
     font-size: 45px;
 }
 
-.cell256 {}
+.cell256 {
+    color: #f9f6f2;
+    background: #edcc61;
+    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.31746), inset 0 0 0 1px rgba(255, 255, 255, 0.19048);
+    font-size: 45px;
+}
 
-.cell512 {}
+.cell512 {
+    color: #f9f6f2;
+    background: #edc850;
+    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.39683), inset 0 0 0 1px rgba(255, 255, 255, 0.2381);
+    font-size: 45px;
+}
 
-.cell1024 {}
+.cell1024 {
+    color: #ffffff;
+    background: #ff5c33;
+    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.39683), inset 0 0 0 1px rgba(255, 255, 255, 0.2381);
+    font-size: 42px;
+}
 
-.cell2048 {}
+.cell2048 {
+     color: #ffffff;
+    background: #ff3300;
+    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.39683), inset 0 0 0 1px rgba(255, 255, 255, 0.2381);
+    font-size: 42px;
+}
 
 body {
     background: #faf8ef;

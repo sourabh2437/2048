@@ -2,6 +2,7 @@ var playArr = []; //keeps track of all cells in 1D
 var emptyArr = []; //keeps track of empty cells
 var gameArr = []; //keeps track of filled cells
 var score = 0;
+
 randomCellGenerator = function () {
         var length = emptyArr.length;
         if (length === 0) {
@@ -36,8 +37,6 @@ randomCellGenerator = function () {
         var index2 = playArr.indexOf(node.id);
         if (index2 !== -1) {
             document.getElementById(node.id).innerHTML = node.value;
-            //            var dummyNode = playArr[index2];
-            //            dummyNode.value = node.value;
         }
         var clss = "cell" + node.value;
         document.getElementById(node.id).className = clss;
@@ -46,6 +45,7 @@ randomCellGenerator = function () {
         var index = emptyArr.indexOf(node.id);
         if (index == -1) {
             emptyArr.push(node.id);
+            document.getElementById(node.id).innerHTML = "";
         }
         var index1 = gameArr.indexOf(node.id);
         if (index1 !== -1) {
@@ -111,7 +111,6 @@ randomCellGenerator = function () {
 
     },
     onTopPress = function () {
-        //        console.log(emptyArr, gameArr);
         var v1, v2, v3, v4, i = 0,
             p = 0;
         var j = 4;
@@ -430,24 +429,28 @@ randomCellGenerator = function () {
         gameGrid.appendChild(gameGridBody);
         divGrid.append(gameGrid);
         var start1, start2;
-        //console.log(playArr);
         start1 = this.randomCellGenerator();
         addToBoard(start1);
         start2 = this.randomCellGenerator();
         addToBoard(start2);
-        //console.log(playArr);
-
         handleKeyPress();
 
     },
     onPressRestart = function () {
         gameArr = [];
         emptyArr = [];
-        playArr = [];
-        var parent = document.getElementById("gameGrid");
-        var child = document.getElementsByTagName("table")[0];
-        parent.removeChild(child);
-        onGameStart();
+        score = 0;
+        updateScoreCard();
+        for (var i = 0; i < playArr.length; i++) {
+            emptyArr.push(playArr[i]);
+            document.getElementById(playArr[i]).innerHTML = "";
+            document.getElementById(playArr[i]).className = "emptyCell";
+        }
+        start1 = this.randomCellGenerator();
+        addToBoard(start1);
+        start2 = this.randomCellGenerator();
+        addToBoard(start2);
+
     }
 
 window.onGameStart();
